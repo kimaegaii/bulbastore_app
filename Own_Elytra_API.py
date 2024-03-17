@@ -17,7 +17,7 @@ def prices():
     conn = get_db_connection()
     prices = conn.execute('SELECT * FROM prices').fetchall()
     conn.close()
-    return jsonify([dict(ix) for ix in prices])
+    return jsonify([dict(ix) for ix in elytra_prices])
 
 if __name__ == '__main__':
     app.run(debug=True)
