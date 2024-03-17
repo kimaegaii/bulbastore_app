@@ -10,7 +10,7 @@ def get_db_connection():
 
 @app.route('/')
 def hello_world():
-    return 'Hello, !!new'
+    return 'Hello, wow'
 
 @app.route('/prices', methods=['GET'])
 def prices():
@@ -18,7 +18,6 @@ def prices():
     prices = conn.execute('SELECT * FROM elytra_prices').fetchall()  # Fetch data from elytra_prices table
     conn.close()
     return jsonify([dict(ix) for ix in prices])  # Use 'prices' variable here
-
 
 if __name__ == '__main__':
     app.run(debug=True)
