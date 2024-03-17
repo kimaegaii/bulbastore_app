@@ -10,7 +10,7 @@ def get_db_connection():
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
+    return 'Hello, !!'
 
 @app.route('/prices', methods=['GET'])
 def prices():
