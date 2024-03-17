@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prices Table</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Elytra Prices</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Elytra</th>
+            <th>Sell Price</th>
+        </tr>
+        {% for price in prices %}
+            <tr>
+                <td>{{ price.date }}</td>
+                <td>{{ price.elytra }}</td>
+                <td>{{ price.sell_price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
